@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.forms import ModelForm
 
 # Create your models here.
 
@@ -46,3 +47,9 @@ class CartItem(models.Model):
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Дата обновления")
     def __str__(self):
         return self.product
+
+    class ProductForm(ModelForm):
+        class Meta:
+            model = Product
+            fields = ['name', 'price', 'description', 'image', 'stock', 'manufacturer', 'supplier']
+
