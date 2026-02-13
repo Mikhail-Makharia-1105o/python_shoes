@@ -1,12 +1,11 @@
 from .models import *
 from django.forms import ModelForm
-
 class ProductForm(ModelForm):
     class Meta:
         model = Product
-        fields = ['name', 'price', 'description', 'image', 'stock', 'manufacturer', 'supplier']
+        fields = '__all__'
 
-class ManufacturerForm(ModelForm):
+class OrderForm(ModelForm):
     class Meta:
-        model = Manufacturer
-        fields = ['name', 'address']
+        model = Order
+        fields = '__all__'
