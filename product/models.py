@@ -14,7 +14,7 @@ class Product(models.Model):
     price = models.PositiveIntegerField(verbose_name="Цена")
     unit = models.CharField(max_length=10, verbose_name="Единица измерения")
     category = models.CharField(max_length=100, verbose_name="Категория")
-    current_sale = models.models.PositiveIntegerField(verbose_name="Текущая скидка")
+    current_sale = models.PositiveIntegerField(verbose_name="Текущая скидка")
     description = models.TextField(verbose_name="Описание")
     image = models.ImageField(upload_to='products/', verbose_name="Изображение")
     stock = models.IntegerField(verbose_name="Количество на складе")
